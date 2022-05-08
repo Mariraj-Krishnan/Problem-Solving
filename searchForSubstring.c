@@ -13,15 +13,11 @@ End index: <3, 2> */
 #include <math.h>
 
 int main(){
-    int n,count =0;
-    char string[100];
-    char stringArray[20][5];
-    char word[5];
+    int n, count = 0;
+    char string[100], stringArray[20][5], word[5];
 
     printf("Enter the length of the string: ");
     scanf("%d",&n);
-
-    int row = ceil(n/5.0);
 
     printf("Enter the string: ");
     scanf("%s",string);
@@ -32,7 +28,7 @@ int main(){
     for(int i=0; i<n; i++){
       if(word[i]&&word[i]>=97) word[i]-=32;
       if(string[i]>=97) string[i]-=32;
-        stringArray[i/5][i%5]=string[i];
+        stringArray[i/5][i%5] = string[i];
     }
 
     for (int i = 0; i < n; i++) {
